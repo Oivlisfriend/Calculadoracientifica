@@ -35,16 +35,6 @@ function calculate (){
     }
 }
 
-//Function to calcule sine, cosine, tan of an angle in DEG
-
-function sine(){
-    screen.value = Math.sin (screen.value*( Math.PI / 180))
-}
-
-function cosine(){
-    screen.value = Math.cos(screen.value * (Math.PI / 180))
-}
-
 function tan(){
     screen.value = Math.tan (screen.value*(Math.PI/180))
 }
