@@ -67,20 +67,6 @@ body{
     border-top: 2px solid #000;
 }
 
-.btn-num{
-    background-color: white;
-    color: black;
-    font-size: 1.1em;
-    border-radius: 1px;
-    border-bottom: 2px solid #000;
-    border-top: 2px solid black;
-}
-/*
-.btn-num:active{
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-*/
 .btn-red{
     background: #fff;
     padding: 4px;
@@ -88,13 +74,4 @@ body{
     font-size: 1.1em;
     border-radius: 1px;
     border-bottom: 2px solid black;
-}
-
-.btn-opera{
-    background: #fff;
-    color: #000;
-    padding: 2.5px;
-    font-size: 1.1em;
-    border-bottom: 2px solid #111;
-    border-top: 2px solid #000;
 }
