@@ -1,0 +1,50 @@
+*{
+    margin: 10px;
+}
+body{
+    
+    background-color: #246aaf;
+}
+
+div{
+    margin-left: 35% ;
+    
+}
+.btnTop{
+    margin: auto;
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+}
+
+.btnNum{
+    margin: auto;
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+}
+
+.btnMath{
+    margin: auto;
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+
+}
+
+.btnButton{
+    margin: auto;
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+}
+
+.calculator{
+    width: 350px;
+    height: 320px;
+    background-color: #c0c0c0;
+    box-shadow: 0px 0px 0px 10px #666;
+    border-radius: 10px;
+}
+
+
