@@ -87,6 +87,10 @@ function sqr(){
     screen.value += "^2";
     compute ();
 }
+function base10(){
+    screen.value = "10^"+screen.value;
+    compute ();
+}
 function tqr(){
     screen.value += "^3";
     compute ();
@@ -154,6 +158,14 @@ function sen(){
     screen.value = Math.sin (screen.value*(Math.PI/180));
     addHHistoric(screen.value);
 
+}
+function cot(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.fundocolor(screen.value*(Math.PI/180));
+    addHHistoric(screen.value);
 }
 
 //Function to calcule asin, acos and atan
