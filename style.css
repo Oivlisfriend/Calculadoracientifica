@@ -55,6 +55,9 @@ table h1 {
     color: white;
     text-shadow: 3px 3px rgb(1 247 255 / 40%);
 }
+.pointer{
+    cursor: pointer;
+}
 .none-list{
     list-style: none;
 }

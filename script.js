@@ -4,6 +4,16 @@ let screena =  document.getElementById("screena");
 let screeny =  document.getElementById("screeny");
 let fundocolor =  document.getElementById("fundo");
 let letracolor =  document.getElementById("letra");
+let calcCient = document.getElementById("calcCient");
+let calcEqua = document.getElementById("calcEqua");
+calcCient.addEventListener("click",()=>{
+    document.getElementById("cientifica").classList.remove('none');
+    document.getElementById('equacao').classList.add('none');
+});
+calcEqua.addEventListener("click",()=>{
+    document.getElementById("cientifica").classList.add('none');
+    document.getElementById('equacao').classList.remove('none');
+});
 fundocolor.addEventListener("input",()=>{
     document.body.style.background=fundocolor.value;
 });
