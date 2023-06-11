@@ -1,9 +1,23 @@
-
 let screen = document.getElementById("screen");
 let screenx =  document.getElementById("screenx");
 let screena =  document.getElementById("screena");
 let screeny =  document.getElementById("screeny");
-
+let fundocolor =  document.getElementById("fundo");
+let letracolor =  document.getElementById("letra");
+fundocolor.addEventListener("input",()=>{
+    document.body.style.background=fundocolor.value;
+});
+letracolor.addEventListener("input",()=>{
+    let span = document.getElementsByTagName('label');
+    span[0].style.color=letracolor.value ;
+   for(let i=0;i<span.length;i++){
+        span[i].style.color=letracolor.value;
+    }
+     span = document.getElementsByTagName('label');
+    for(let i=0;i<span.length;i++){
+        span[i].style.color=letracolor.value;
+    }
+});
 document.onkeydown = function(e) {
     if(e.key === 'Escape') {
         screen.value = "0";
@@ -14,6 +28,16 @@ document.onkeydown = function(e) {
   }
 function cls(){
     screen.value="0";
+}
+function euler(){
+    screen.value = Math.exp(1);
+}
+function eulerx(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.exp(screen.value);
 }
 function press (numValue){
     if (screen.value === null || screen.value === "0")
@@ -45,12 +69,16 @@ function linear(){
   valor=eval(valor/screenx.value);
   let result = document.getElementById("result");
   console.log(result);
-    result.innerHTML="x="+valor;
+    result.innerHTML="x = "+valor;
 
 }
 
 function sqr(){
     screen.value += "^2";
+    compute ();
+}
+function tqr(){
+    screen.value += "^3";
     compute ();
 }
 function ln (){
@@ -95,19 +123,47 @@ function tan(){
         alert("Digite apenas números");
         return;
     };
-    screen.value = Math.tan (screen.value*(Math.PI/180));
+    screen.value = Math.tan(screen.value*(Math.PI/180));
+    addHHistoric(screen.value);
+
+}
+function cos(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.cos (screen.value*(Math.PI/180));
+    addHHistoric(screen.value);
+
+}
+function sen(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.sin (screen.value*(Math.PI/180));
     addHHistoric(screen.value);
 
 }
 
 //Function to calcule asin, acos and atan
 
-function invsine(){
+function arcsen(){
     if(isNaN(screen.value)){
         alert("Digite apenas números");
         return;
     };
     screen.value = Math.asin(screen.value) *( 180 /Math.PI);
+    addHHistoric(screen.value);
+
+}
+
+function arccos(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.acos(screen.value) *( 180 /Math.PI);
     addHHistoric(screen.value);
 
 }

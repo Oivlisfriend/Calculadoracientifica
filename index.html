@@ -9,14 +9,13 @@
   
 </head>
 <body>
-    <div>
+    <section class="flex  h-100">
+    <div >
         <form class="flex">
             
         <table class=" ">
             <tr>
                 <td  colspan="6" ><input id="screen" name="display"  class="input" value="0" size="33" maxlength="25"/></td>
-               
- 
             </tr>
             <tr>
                 <td><input type="button" class="btnMath" name="btnMath" value="Ans" onclick="this.form.display.value= 0"></td>
@@ -46,8 +45,8 @@
 
             </tr>
             <tr>
-                <td><input type="button" class="btnMath" name="btnMath" value="sen" onclick=" cos()"></td>
-                <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="sin()"></td>
+                <td><input type="button" class="btnMath" name="btnMath" value="sen" onclick=" sen()"></td>
+                <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="cos()"></td>
                 <td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="tan()"></td>
                 <td><input type="button" class="btnMath" name="btnMath" value="cot" onclick="tan()"></td>
                 <td><input type="button" class="btnMath" name="btnMath" value="2&#x02B8;" onclick="percent(this.form.display)"></td>
@@ -56,7 +55,7 @@
         </tr>
         <tr>
             <td><input type="button" class="btnMath" name="btnMath" value="arcsen" onclick=" arccos()"></td>
-            <td><input type="button" class="btnMath" name="btnMath" value="arccos" onclick="arcsin()"></td>
+            <td><input type="button" class="btnMath" name="btnMath" value="arccos" onclick="arccos()"></td>
             <td><input type="button" class="btnMath" name="btnMath" value="arctan" onclick="arctan()"></td>
             <td><input type="button" class="btnMath" name="btnMath" value="arccot" onclick="acrcot()"></td>
             <td><input type="button" class="btnMath" name="btnMath" value="%" onclick="percent(this.form.display)"></td>
@@ -84,7 +83,7 @@
             </tr>
 
             <tr>
-                <td><input type="button" class="btnMath" name="btnMath" value="x&sup3" onclick="sqr()"/></td>
+                <td><input type="button" class="btnMath" name="btnMath" value="x&sup3" onclick="tqr()"/></td>
 
                 <td><input type="button" class="btnNum" name="btnNum" value="1" onclick = "press('1')"></td>
                 <td><input type="button" class="btnNum" name="btnNum" value="2" onclick = "press('2')"></td>
@@ -95,7 +94,7 @@
             
 
             <tr>
-                <td><input type="button" class="btnMath" name="btnMath" value=" e&#x02B8;" onclick="press('^')"></td>
+                <td><input type="button" class="btnMath" name="btnMath" value=" e&#x02B8;" onclick="eulerx()"></td>
                 <td><input type="button" class="btnMath" name="btnMath" value="x&sup2" onclick="sqr()"/></td>
                 <td><input type="button" class="btnMath" name="btnMath" value="." onclick="press('.')"></td>
                 <td><input type="button" class="btnNum" name="btnNum" value="0 " onclick="press('0')"></td>
@@ -113,32 +112,27 @@
     
             </ul>
         </div>
-        <table class="calculator">
-            <tr>
-                <td colspan="6"><label for="">ax+b=c</label></td>
-               
-            </tr>
-            <tr>
-                <td colspan="6"><label for="" id="result">x</label></td>
-               
-            </tr>
-            <tr>
-                <td colspan="6"><label>a</label><input id="screenx" name="display" value="0" size="33" maxlength="25"></td>
-            </tr>
-            <tr>
-                <td colspan="6"><label>b</label><input id="screeny" name="display" value="0" size="33" maxlength="25"></td>
-
-            </tr>
-            <tr>
-                <td colspan="6"><label>c</label><input id="screena" name="display" value="0" size="33" maxlength="25"></td>
-            </tr>
-            <tr class="w-100">
-                <td class="w-100"><input type="button" class="btnMath w-100" name="btnMath" value="=" onclick="compute()"></td>
-            </tr>
-
-        </table>
+     
     </form>
     </div>
+    <div class="calculator">
+        <div class="color-w text-center equacao-center mt"><label for="">ax+b=c</label></div>
+        
+        
+        <div class="flex mt " ><label class="equacao">a</label><input id="screenx" class="equa"  name="display" value="0" size="33" maxlength="25"></div>
+        <div class="flex" ><label class="equacao">b</label><input id="screeny" name="display" class="equa"  value="0" size="33" maxlength="25"></div>
+        
+        <div class="flex" ><label class="equacao">c</label><input id="screena" name="display"  class="equa " value="0" size="33" maxlength="25"></div>
+        <div  class="color-w equacao mt text-center"><label for="" id="result"></label></div>
+
+        <div class="w-100 "><input type="button" class="btnMath w-100 btn-eq mt" name="btnMath" value="=" onclick="linear()"></div>
+        
+    </div>
+    <div class="flex  mt color-w">
+        <div class="me-2"><label for="">Cor do fundo: </label><input type="color" name="fundo" id="fundo"></div>
+      <div class="me-2"><label for="">Letra: </label><input type="color" name="letra" id="letra"></div>
+           <div class="me-2"><label for="">: </label><input type="color" name="fundo" id="fundo"></div>
+</section>
     <script src="script.js"></script>
 
 
