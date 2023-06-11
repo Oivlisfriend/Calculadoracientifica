@@ -1,4 +1,126 @@
-*{
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgb(37 31 50);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+table {
+    margin-top: 50px;
+}
+
+table td {
+    padding: 5px;
+}
+.me-2{
+    margin-left: 25px;
+}
+.mt{
+    margin-top: 20px;
+}
+.span{
+    font-size: 15px;
+}
+.color-w{
+    color:#fff;
+}
+.w-h{
+    width:258px;
+}
+li{ 
+    margin-right: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+.historico{
+    overflow: auto;
+    height: 500px !important;
+}
+table h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px rgb(1 247 255 / 40%);
+}
+.none-list{
+    list-style: none;
+}
+.btn-operation {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(51 37 88 / 60%) !important;
+    box-shadow: rgba(1, 247, 255, 0.4) 3px 3px, rgba(1, 247, 255, 0.4) 3px 3px !important;
+
+}
+td input[type=button] {
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: rgb(63, 25, 151);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2.5px;
+    box-shadow: rgba(1, 247, 255, 0.4) 3px 3px;
+}
+td {
+    width: 100px;
+    height: 50px;
+}
+
+
+.input{
+    border: none;
+    border-radius: 2.5px;
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.sublinhado{
+    text-decoration: underline;
+    text-decoration-color: #246aaf;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+
+}
+.flex{
+    display: flex;
+}
+.m-0{
+    margin:0;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-end{
+    align-items: end;
+}
+.w{
+    width: 100px;
+}
+.w-100{
+    width: 100%;
+}
+.border-left{
+    border-left: 1px solid rgb(102, 102, 102);
+}
+.h-100{
+    height: 100%;
+}
+/**{
     margin: 10px;
 }
 body{
@@ -48,3 +170,4 @@ div{
 }
 
 
+*/

@@ -1,68 +1,137 @@
 
-function addChar (entrada, caracter){
+let screen = document.getElementById("screen");
+let screenx =  document.getElementById("screenx");
+let screena =  document.getElementById("screena");
+let screeny =  document.getElementById("screeny");
 
-    if (entrada.value == null || entrada.value == "0"){
-        entrada.value = caracter;
-    }else{
-        entrada.value += caracter;
+document.onkeydown = function(e) {
+    if(e.key === 'Escape') {
+        screen.value = "0";
     }
-}
-
-
-function sin (angulo){
-    angulo.display.value = Math.sin (angulo.display.value);
-}
-
-function tan (angulo){
-    angulo.display.value = Math.tan (angulo.display.value);
-}
-
-function cos (angulo){
-    angulo.display.value = Math.cos (angulo.display.value);
-}
-
-function raiz(valor){
-    form.display.value = Math.sqrt (form.display.value);
-
-}
-
-function ln (valor){
-    valor.display.value = Math.log (valor.display.value);
-}
-
-function exp (valor){
-    valor.display.value = Math.exp (form.display.value);
-}
-
-function deleteChar (entrada){
-    entrada.value = entrada.value.substring (0, entrada.value.length - 1)
-}
-
-let valor = 0.0;
-
-function percent (input){
-    valor = input.value;
-    input.value = input.value + "%";
-}
-
-function compute (form){
-    form.display.value = eval (form.display.value);
-}
-
-function sqaure (form){
-    form.display.value = eval (form.display.value) * eval (form.display.value);
-}
-
-function checkNum (string){
-
-    for (let i = 0; i < string.lenth; i++){
-        let ch = str.charAt(i);
-        if (ch < "0" || ch > "9"){
-            if (ch != "/" && ch != "x" && ch != "+" && ch != "-" && ch != "." && ch != "(" && ch != ")" && ch != "%"){
-                alert ("Entrada Inválida");
-                return false;
-            }
-        }
+   else if(e.key === 'Backspace') {
+        deleteChar();    
     }
-    return true;
+  }
+function cls(){
+    screen.value="0";
+}
+function press (numValue){
+    if (screen.value === null || screen.value === "0")
+    {
+        screen.value ='';
+    }
+    screen.value += numValue;
+}
+function addHHistoric(valor){
+    let ul= document.getElementById('historic');
+    let li=document.createElement('li');
+    li.innerHTML=valor;
+    ul.appendChild(li);
+}
+
+function sqrt(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.sqrt (screen.value);
+    addHHistoric(screen.value);
+
+
+}
+function linear(){
+    
+  let valor=eval((screena.value+"+"+screeny.value*(-1)));
+  valor=eval(valor/screenx.value);
+  let result = document.getElementById("result");
+  console.log(result);
+    result.innerHTML="x="+valor;
+
+}
+
+function sqr(){
+    screen.value += "^2";
+    compute ();
+}
+function ln (){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+   screen.value = Math.log (screen.value);
+   addHHistoric(screen.value);
+
+}
+
+function exp (){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+   screen.value = Math.exp (screen.value);
+   addHHistoric(screen.value);
+
+}
+
+function deleteChar (){
+    screen.value= screen.value.substring (0, screen.value.length - 1);
+}
+
+
+function compute (){
+   let calc=screen.value;
+    if(calc.includes('x'))
+        calc = calc.replace(/x/g, '*');
+    else if(calc.includes('^'))
+        calc = calc.replace(/\^/g, "**");
+   
+    screen.value = eval (calc);
+    addHHistoric(screen.value);
+
+   // linear();
+}
+function tan(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.tan (screen.value*(Math.PI/180));
+    addHHistoric(screen.value);
+
+}
+
+//Function to calcule asin, acos and atan
+
+function invsine(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.asin(screen.value) *( 180 /Math.PI);
+    addHHistoric(screen.value);
+
+}
+function log(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    }; 
+    screen.value =Math.log10(screen.value);
+    addHHistoric(screen.value);
+}
+
+function invcosine(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.ceil(Math.acos(screen.value)*(180 / Math.PI))
+}
+
+function invtan(){
+    if(isNaN(screen.value)){
+        alert("Digite apenas números");
+        return;
+    };
+    screen.value = Math.atan(screen.value) * (180 / Math.PI)
 }
